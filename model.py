@@ -32,7 +32,7 @@ def analysis(*args, **kwargs):
   y1=[]
   pr=[]
     
-  #text=[]
+  text=[]
   #for i in range(len(an)):
     #buff = document.getElementById(an[i])
     #if buff.value != '':
