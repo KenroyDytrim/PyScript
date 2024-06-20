@@ -43,6 +43,8 @@ def analysis(*args, **kwargs):
   
   namet=np.array(['Cal', 'Fos', 'Oks', 'EksKal', 'EksFos', 'EksOks', 'DCT', 'Time', 'Kifoz', 'StabIzmen'])
   td=np.array(text)
+
+  print(td)
   
   test=pd.DataFrame(columns= namet)
   test.loc[ len(test.index )] =td
