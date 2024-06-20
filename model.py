@@ -42,11 +42,11 @@ def analysis(*args, **kwargs):
         return
 
   buff = document.getElementById('an10')
-    if buff.value != '':
-        text.append(int(buff.value))
-    else:
-        print("Поля должны быть заполнены")
-        return
+  if buff.value != '':
+    text.append(int(buff.value))
+  else:
+    print("Поля должны быть заполнены")
+    return
 
   namet=np.array(['Cal', 'Fos', 'Oks', 'EksKal', 'EksFos', 'EksOks', 'DCT', 'Time', 'Kifoz', 'StabIzmen'])
   td=np.array(text)
