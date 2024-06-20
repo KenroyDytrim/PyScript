@@ -32,14 +32,14 @@ def analysis(*args, **kwargs):
   y1=[]
   pr=[]
     
-  text=[]
-  for i in range(len(an)):
-    buff = document.getElementById(an[i])
-    if buff.value != '':
-        text.append(buff.value)
-    else:
-        print("Поля должны быть заполнены")
-        return
+  #text=[]
+  #for i in range(len(an)):
+    #buff = document.getElementById(an[i])
+    #if buff.value != '':
+        #text.append(buff.value)
+    #else:
+        #print("Поля должны быть заполнены")
+        #return
 
   namet=np.array(['Cal', 'Fos', 'Oks', 'EksKal', 'EksFos', 'EksOks', 'DCT', 'Time', 'Kifoz', 'StabIzmen'])
   td=np.array(text)
