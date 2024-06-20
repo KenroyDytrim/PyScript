@@ -41,13 +41,8 @@ def analysis(*args, **kwargs):
         print("Поля должны быть заполнены")
         return
 
-  buff = document.getElementById('an10')
-  if buff.value != '':
-    text.append(int(buff.value))
-  else:
-    print("Поля должны быть заполнены")
-    return
-
+  print(text)
+  
   namet=np.array(['Cal', 'Fos', 'Oks', 'EksKal', 'EksFos', 'EksOks', 'DCT', 'Time', 'Kifoz', 'StabIzmen'])
   td=np.array(text)
   test=pd.DataFrame(columns= namet)
