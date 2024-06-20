@@ -47,8 +47,10 @@ def analysis(*args, **kwargs):
   test=pd.DataFrame(columns= namet)
   test.loc[ len(test.index )] =td
 
-  
-  test.iat[0, 9] = int(test.iat[0, 9])
+  if test.iat[0, 9] == 'True'
+        test.iat[0, 9] = 1
+  else:
+        test.iat[0, 9] = 0
   print(test)
 
   st1=''
