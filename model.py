@@ -14,8 +14,6 @@ url="https://raw.githubusercontent.com/KenroyDytrim/PyScript/main/pickle_model.p
 
 clf = joblib.load(BytesIO(requests.get(url).content))
 
-print("Лох")
-
 names=["Изменение контуров замыкательных пластинок", "Клиновидная форма тел позвонков", "Грыжи Шморля", "Остеопороз тел позвонков", "Уменьшение высоты межпозвоночного диска", "Изменение контуров апофизов", "Признаки остеохондроза", "ЭНМГ"]
 
 ch=['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6', 'ch7', 'ch8']
@@ -36,12 +34,12 @@ def analysis(*args, **kwargs):
     
   text=[]
   for i in range(len(an)):
-  buff = document.getElementById(an[i])
-  if buff.value != '':
-    text.append(buff.value)
-  else:
-    print("Поля должны быть заполнены")
-    return
+    buff = document.getElementById(an[i])
+    if buff.value != '':
+        text.append(buff.value)
+    else:
+        print("Поля должны быть заполнены")
+        return
 
   namet=np.array(['Cal', 'Fos', 'Oks', 'EksKal', 'EksFos', 'EksOks', 'DCT', 'Time', 'Kifoz', 'StabIzmen'])
   td=np.array(text)
