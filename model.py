@@ -17,7 +17,7 @@ clf = joblib.load(BytesIO(requests.get(url).content))
 names=["Изменение контуров замыкательных пластинок", "Клиновидная форма тел позвонков", "Грыжи Шморля", "Остеопороз тел позвонков", "Уменьшение высоты межпозвоночного диска", "Изменение контуров апофизов", "Признаки остеохондроза", "ЭНМГ"]
 
 ch=['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6', 'ch7', 'ch8']
-an=['an1', 'an2', 'an3', 'an4', 'an5', 'an6', 'an7', 'an8', 'an9', 'an10']
+an=['an1', 'an2', 'an3', 'an4', 'an5', 'an6', 'an7', 'an8', 'an9']
 
 r1=['r1_1', 'r1_2', 'r1_3', 'r1_4', 'r1_5', 'r1_6', 'r1_7', 'r1_8']
 
@@ -40,20 +40,18 @@ def analysis(*args, **kwargs):
     else:
         print("Поля должны быть заполнены")
         return
-  
+
+  buff = document.getElementById('an10')
+  if(buff.checked):
+    text.append(1)
+  else:
+    text.append(0)  
+      
   namet=np.array(['Cal', 'Fos', 'Oks', 'EksKal', 'EksFos', 'EksOks', 'DCT', 'Time', 'Kifoz', 'StabIzmen'])
   td=np.array(text)
-
-  print(td)
-  
   test=pd.DataFrame(columns= namet)
   test.loc[ len(test.index )] =td
-
-  print(test.iat[0, 9])
-  if test.iat[0, 9] == 'true':
-        test.iat[0, 9] = 1
-  else:
-        test.iat[0, 9] = 0
+  
   print(test)
 
   st1=''
