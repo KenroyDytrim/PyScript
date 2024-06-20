@@ -33,8 +33,8 @@ def analysis(*args, **kwargs):
   pr=[]
     
   text=[]
-  #for i in range(len(an)):
-    #buff = document.getElementById(an[i])
+  for i in range(len(an)):
+    buff = document.getElementById(an[i])
     #if buff.value != '':
         #text.append(buff.value)
     #else:
