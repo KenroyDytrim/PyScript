@@ -52,8 +52,6 @@ def analysis(*args, **kwargs):
   test=pd.DataFrame(columns= namet)
   test.loc[ len(test.index )] =td
   
-  print(test)
-
   st1=''
 
   kol=0
