@@ -36,7 +36,7 @@ def analysis(*args, **kwargs):
   for i in range(len(an)):
     buff = document.getElementById(an[i])
     if buff.value != '':
-        text.append(buff.value)
+        text.append(float(buff.value))
     else:
         print("Поля должны быть заполнены")
         return
