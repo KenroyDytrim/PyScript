@@ -68,7 +68,8 @@ def analysis(*args, **kwargs):
       kol+=1
       y1.append(int(buff.value))
 
-  main.setAttribute('style', 'display:flex; justify-content: space-around; align-items: baseline; flex-wrap: nowrap; font-size: 18px;')
+  if kol > 0:
+      main.setAttribute('style', 'display:flex; justify-content: space-around; align-items: baseline; flex-wrap: nowrap; font-size: 18px;')
     
   y_pred=clf.predict(test)
 
