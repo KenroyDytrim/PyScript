@@ -24,6 +24,9 @@ r1=['r1_1', 'r1_2', 'r1_3', 'r1_4', 'r1_5', 'r1_6', 'r1_7', 'r1_8']
 def analysis(*args, **kwargs):
   error = document.getElementById('err')
   error.setAttribute('style', 'width: 45vw; display:none;')
+
+  main = document.getElementById('main')
+  main.setAttribute('style', 'display:none;')
   
   st=""
   for i in r1:
@@ -65,12 +68,8 @@ def analysis(*args, **kwargs):
       kol+=1
       y1.append(int(buff.value))
 
-  main = document.getElementById('main')
-  if kol>0:
-    main.setAttribute('style', 'display:flex; justify-content: space-around; align-items: baseline; flex-wrap: nowrap; font-size: 18px;')
-  else:
-    main.setAttribute('style', 'display:none;')
-
+  main.setAttribute('style', 'display:flex; justify-content: space-around; align-items: baseline; flex-wrap: nowrap; font-size: 18px;')
+    
   y_pred=clf.predict(test)
 
   for i in y1:
