@@ -22,6 +22,9 @@ an=['an1', 'an2', 'an3', 'an4', 'an5', 'an6', 'an7', 'an8', 'an9']
 r1=['r1_1', 'r1_2', 'r1_3', 'r1_4', 'r1_5', 'r1_6', 'r1_7', 'r1_8']
 
 def analysis(*args, **kwargs):
+  error = document.getElementById('err')
+  error.setAttribute('style', 'width: 45vw; display:none;')
+  
   st=""
   for i in r1:
     resS = Element(i)
@@ -38,7 +41,7 @@ def analysis(*args, **kwargs):
     if buff.value != '':
         text.append(buff.value)
     else:
-        print("Поля должны быть заполнены")
+        error.setAttribute('style', 'width: 45vw;')
         return
 
   buff = document.getElementById('an10')
